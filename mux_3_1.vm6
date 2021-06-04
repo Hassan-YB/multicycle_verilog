@@ -1,0 +1,47 @@
+NDS Database:  version I.31
+
+NDS_INFO | acr2 | A2C32A44VQ | XA2C32A-6-VQ44
+
+DEVICE | A2C32A | A2C32A44VQ | 
+
+NETWORK | mux_3_1 | 0 | 0 | 1073823750
+
+MACROCELL_INSTANCE | NULL | y_MC | mux_3_1_COPY_0_COPY_0 | 0 | 0 | 1
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | y_MC.Q | 31 | ? | 0 | 0 | mux_3_1_COPY_0_COPY_0 | NULL | y_MC.Q | y_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | y_MC.SI | y_MC | 0 | 0 | 2
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | y_MC.D1 | 29 | ? | 0 | 0 | y_MC | NULL | NULL | y_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | y_MC.D2 | 28 | ? | 0 | 0 | y_MC | NULL | NULL | y_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | y_MC.REG | y_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | y_MC.D | 27 | ? | 0 | 0 | y_MC | NULL | NULL | y_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | y_MC.Q | 30 | ? | 0 | 0 | y_MC | NULL | NULL | y_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | y | mux_3_1_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | y_MC.Q | 31 | ? | 0 | 0 | mux_3_1_COPY_0_COPY_0 | NULL | y_MC.Q | y_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | y | 32 | PO | 0 | 0 | mux_3_1_COPY_0_COPY_0 | NULL | NULL | y | 0 | 6 | OI_OUT
+
+FB_INSTANCE | FOOBAR1_ | mux_3_1_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 1 | y_MC | 1 | NULL | 0 | y | 1 | 38 | 49152
+
+FB_INSTANCE | FOOBAR2_ | mux_3_1_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | INPUTPINS_FOOBAR3_ | mux_3_1_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR1_ | FOOBAR1__ctinst | mux_3_1_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR2_ | FOOBAR2__ctinst | mux_3_1_COPY_0_COPY_0 | 0 | 0 | 0
+
+
+IOSTD | LVCMOS18
+y | LVCMOS18
+

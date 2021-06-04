@@ -1,0 +1,14 @@
+MDF Database:  version 1.0
+MDF_INFO | multicycle_source | XA2C32A-6-VQ44
+MACROCELL | 0 | 0 | y_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 3 | x1  | s  | x2
+INPUTP | 3 | 3 | 4 | 1
+EQ | 2 | 
+   y = x1 & s
+	# !s & x2;	// (2 pt, 3 inp)
+
+PIN | s | 64 | 16 | LVCMOS18 | 4 | 1 | 0 | 0
+PIN | x1 | 64 | 16 | LVCMOS18 | 3 | 1 | 0 | 0
+PIN | x2 | 64 | 16 | LVCMOS18 | 1 | 1 | 0 | 0
+PIN | y | 536871040 | 0 | LVCMOS18 | 5

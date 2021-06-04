@@ -1,0 +1,3 @@
+xst -ise "C:/Xilinx/Multicycle_Processor/Multicycle_Processor.ise" -intstyle ise -ifn multicycle_source.xst -ofn multicycle_source.syr
+xst -ise "C:/Xilinx/Multicycle_Processor/Multicycle_Processor.ise" -intstyle ise -ifn multicycle_source.xst -ofn multicycle_source.syr
+xst -ise "C:/Xilinx/Multicycle_Processor/Multicycle_Processor.ise" -intstyle ise -ifn multicycle_source.xst -ofn multicycle_source.syr

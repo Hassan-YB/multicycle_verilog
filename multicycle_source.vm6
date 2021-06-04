@@ -1,0 +1,95 @@
+NDS Database:  version I.31
+
+NDS_INFO | acr2 | A2C32A44VQ | XA2C32A-6-VQ44
+
+DEVICE | A2C32A | A2C32A44VQ | 
+
+NETWORK | multicycle_source | 0 | 0 | 1073758214
+
+INPUT_INSTANCE | 0 | 0 | NULL | s_II | multicycle_source_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | s | 105 | PI | 0 | 0 | multicycle_source_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | s_II/UIM | 112 | ? | 0 | 0 | multicycle_source_COPY_0_COPY_0 | NULL | NULL | s_II | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | x1_II | multicycle_source_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | x1 | 106 | PI | 0 | 0 | multicycle_source_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | x1_II/UIM | 111 | ? | 0 | 0 | multicycle_source_COPY_0_COPY_0 | NULL | NULL | x1_II | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | x2_II | multicycle_source_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | x2 | 107 | PI | 0 | 0 | multicycle_source_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | x2_II/UIM | 113 | ? | 0 | 0 | multicycle_source_COPY_0_COPY_0 | NULL | NULL | x2_II | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | NULL | y_MC | multicycle_source_COPY_0_COPY_0 | 0 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | x1_II/UIM | 111 | ? | 0 | 0 | multicycle_source_COPY_0_COPY_0 | NULL | NULL | x1_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | s_II/UIM | 112 | ? | 0 | 0 | multicycle_source_COPY_0_COPY_0 | NULL | NULL | s_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | x2_II/UIM | 113 | ? | 0 | 0 | multicycle_source_COPY_0_COPY_0 | NULL | NULL | x2_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | y_MC.Q | 115 | ? | 0 | 0 | multicycle_source_COPY_0_COPY_0 | NULL | y_MC.Q | y_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | y_MC.SI | y_MC | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | x1_II/UIM | 111 | ? | 0 | 0 | multicycle_source_COPY_0_COPY_0 | NULL | NULL | x1_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | s_II/UIM | 112 | ? | 0 | 0 | multicycle_source_COPY_0_COPY_0 | NULL | NULL | s_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | x2_II/UIM | 113 | ? | 0 | 0 | multicycle_source_COPY_0_COPY_0 | NULL | NULL | x2_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | y_MC.D1 | 110 | ? | 0 | 0 | y_MC | NULL | NULL | y_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | y_MC.D2 | 109 | ? | 0 | 0 | y_MC | NULL | NULL | y_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | x1_II/UIM | IV_TRUE | s_II/UIM
+SPPTERM | 2 | IV_FALSE | s_II/UIM | IV_TRUE | x2_II/UIM
+
+SRFF_INSTANCE | y_MC.REG | y_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | y_MC.D | 108 | ? | 0 | 0 | y_MC | NULL | NULL | y_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | y_MC.Q | 114 | ? | 0 | 0 | y_MC | NULL | NULL | y_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | y | multicycle_source_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | y_MC.Q | 115 | ? | 0 | 0 | multicycle_source_COPY_0_COPY_0 | NULL | y_MC.Q | y_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | y | 116 | PO | 0 | 0 | multicycle_source_COPY_0_COPY_0 | NULL | NULL | y | 0 | 6 | OI_OUT
+
+FB_INSTANCE | FOOBAR1_ | multicycle_source_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 1 | y_MC | 1 | NULL | 0 | y | 1 | 38 | 49152
+FBPIN | 2 | NULL | 0 | s_II | 1 | NULL | 0 | 37 | 49152
+FBPIN | 3 | NULL | 0 | x1_II | 1 | NULL | 0 | 36 | 49152
+FBPIN | 4 | NULL | 0 | x2_II | 1 | NULL | 0 | 34 | 53248
+
+FB_INSTANCE | FOOBAR2_ | multicycle_source_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | INPUTPINS_FOOBAR3_ | multicycle_source_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR1_ | FOOBAR1__ctinst | multicycle_source_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR2_ | FOOBAR2__ctinst | multicycle_source_COPY_0_COPY_0 | 0 | 0 | 0
+
+PLA | FOOBAR1_ | 2
+PLA_TERM | 0 | 
+SPPTERM | 2 | IV_TRUE | x1_II/UIM | IV_TRUE | s_II/UIM
+PLA_TERM | 1 | 
+SPPTERM | 2 | IV_FALSE | s_II/UIM | IV_TRUE | x2_II/UIM
+
+
+IOSTD | LVCMOS18
+s | LVCMOS18
+x1 | LVCMOS18
+x2 | LVCMOS18
+y | LVCMOS18
+
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 1 | s | 37 | 2 | x1 | 36 | 3 | x2 | 34
+
+FB_IMUX_INDEX | FOOBAR1_ | -1 | 1 | 2 | 3 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
+
+
